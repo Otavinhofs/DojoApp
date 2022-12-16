@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
     private let backgroundImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -89,17 +90,25 @@ class ViewController: UIViewController {
     }
 
     func setupViewHierarchy() {
-        
         parentStackView.addArrangedSubview(backgroundView)
         parentStackView.addArrangedSubview(bottomStackView)
         backgroundView.addSubview(backgroundImage)
-        buttonStackView.addArrangedSubview(buttonCreateAccount)
-        buttonStackView.addArrangedSubview(buttonLogin)
         bottomStackView.addArrangedSubview(labelMessage)
         bottomStackView.addArrangedSubview(buttonStackView)
-        
-    
+        buttonStackView.addArrangedSubview(buttonCreateAccount)
+        buttonStackView.addArrangedSubview(buttonLogin)
     }
+    
+    func setupViewConstraints() {
+        // parentStackView
+        NSLayoutConstraint.activate([
+            parentStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            parentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            parentStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -36),
+            parentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
+    }
+    
     
     
 }
