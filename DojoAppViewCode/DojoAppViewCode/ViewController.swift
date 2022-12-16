@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }()
     private let backgroundImage: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleToFill
+        image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -37,7 +37,29 @@ class ViewController: UIViewController {
         return stackview
     }()
     
+    private let labelMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Vamos começar?"
+        label.font = .systemFont(ofSize: 18)
+        label.textAlignment = .center
+        label.textColor = UIColor(red: 0.18, green: 0.192, blue: 0.227, alpha: 1)
+        return label
+    }()
     
+    private let buttonStackView: UIStackView = {
+       let stackview = UIStackView()
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        stackview.axis = .vertical
+        stackview.alignment = .center
+        stackview.spacing = 8
+        return stackview
+    }()
+    
+    private let buttonCreateAccount: UIButton = {
+       let button = UIButton()
+        return button
+    }()
     
 
     override func viewDidLoad() {
