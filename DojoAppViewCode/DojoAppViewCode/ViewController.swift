@@ -8,6 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private let parentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
