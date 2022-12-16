@@ -46,6 +46,10 @@ class ViewController: UIViewController {
         label.font = .systemFont(ofSize: 18)
         label.textAlignment = .center
         label.textColor = UIColor(red: 0.18, green: 0.192, blue: 0.227, alpha: 1)
+        label.accessibilityLabel = ""
+        label.accessibilityTraits = .staticText
+        label.accessibilityHint = ""
+        label.accessibilityValue = ""
         return label
     }()
     
