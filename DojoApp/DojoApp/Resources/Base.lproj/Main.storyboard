@@ -32,9 +32,7 @@
                                             <constraint firstItem="xFX-AR-vxu" firstAttribute="top" secondItem="B10-No-DqC" secondAttribute="top" id="6Iw-Kx-Lgn"/>
                                             <constraint firstAttribute="bottom" secondItem="xFX-AR-vxu" secondAttribute="bottom" id="AfR-sU-JuZ"/>
                                             <constraint firstItem="xFX-AR-vxu" firstAttribute="leading" secondItem="B10-No-DqC" secondAttribute="leading" id="LoV-aV-Zwg"/>
-                                            <constraint firstAttribute="width" secondItem="B10-No-DqC" secondAttribute="height" multiplier="64:67" id="RwA-Se-edE"/>
                                             <constraint firstAttribute="trailing" secondItem="xFX-AR-vxu" secondAttribute="trailing" id="dRt-YH-QCB"/>
-                                            <constraint firstAttribute="height" constant="335" id="thg-23-jaZ"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-n1-znc">
@@ -110,15 +108,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NSa-ZU-h0z">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="NKP-oi-c2g">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qhX-X8-bcQ">
-                                <rect key="frame" x="110" y="0.0" width="194" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrowNavigation" imagePlacement="trailing" title="Brasil  ">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Brasil" style="plain" id="NKP-oi-c2g">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -147,7 +138,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowNavigation" width="8.5" height="15"/>
         <image name="backgroundImage" width="375" height="335"/>
         <namedColor name="primary">
             <color red="0.32941176470588235" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,9 +145,6 @@
         <namedColor name="typography">
             <color red="0.1803921568627451" green="0.19215686274509802" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
