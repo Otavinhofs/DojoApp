@@ -88,6 +88,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    func setupViewHierarchy() {
+        
+        parentStackView.addArrangedSubview(backgroundView)
+        parentStackView.addArrangedSubview(bottomStackView)
+        backgroundView.addSubview(backgroundImage)
+        buttonStackView.addArrangedSubview(buttonCreateAccount)
+        buttonStackView.addArrangedSubview(buttonLogin)
+        bottomStackView.addArrangedSubview(labelMessage)
+        bottomStackView.addArrangedSubview(buttonStackView)
+        
+    
+    }
+    
+    
 }
 
