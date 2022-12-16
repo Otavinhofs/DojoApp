@@ -87,6 +87,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViewHierarchy()
         setupViewConstraints()
+        setupNavigationController()
         view.backgroundColor = .white
     }
 
@@ -129,7 +130,10 @@ class ViewController: UIViewController {
     }
     
     func setupNavigationController(){
-        navigationController?.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "brasilButton"),style: .done,target: self, action: #selector(changeCountry))]
+        let uiButton = UIBarButtonItem(image: UIImage(named: "brasilButton"),style: .plain,target: self, action: #selector(changeCountry))
+        uiButton.tintColor = .black
+        navigationItem.rightBarButtonItems = [uiButton]
+    
     }
     
     @objc func changeCountry(){
