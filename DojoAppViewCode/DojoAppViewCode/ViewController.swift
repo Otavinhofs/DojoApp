@@ -105,7 +105,20 @@ class ViewController: UIViewController {
             parentStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             parentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             parentStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -36),
-            parentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            parentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            
+            backgroundImage.topAnchor.constraint(equalTo: backgroundView.topAnchor),
+            backgroundImage.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor),
+            backgroundImage.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
+            backgroundImage.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor),
+            
+            bottomStackView.leadingAnchor.constraint(equalTo: parentStackView.leadingAnchor),
+            bottomStackView.trailingAnchor.constraint(equalTo: parentStackView.trailingAnchor),
+            
+            buttonCreateAccount.heightAnchor.constraint(equalToConstant: 44),
+            buttonLogin.heightAnchor.constraint(equalToConstant: 44),
+            
+            
         ])
     }
     
