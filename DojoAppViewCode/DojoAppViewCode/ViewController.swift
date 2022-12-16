@@ -24,17 +24,18 @@ class ViewController: UIViewController {
     
     private let backgroundImage: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        image.image = UIImage(named: "backgroundImage")
         return image
     }()
     
     private let bottomStackView: UIStackView = {
         let stackview = UIStackView()
+        stackview.translatesAutoresizingMaskIntoConstraints = false
         stackview.axis = .vertical
         stackview.alignment = .center
         stackview.spacing = 36
-        stackview.translatesAutoresizingMaskIntoConstraints = false
         return stackview
     }()
     
@@ -84,12 +85,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        setupViewHierarchy()
+        setupViewConstraints()
+        view.backgroundColor = .white
     }
 
     func setupViewHierarchy() {
+        view.addSubview(parentStackView)
         parentStackView.addArrangedSubview(backgroundView)
         parentStackView.addArrangedSubview(bottomStackView)
         backgroundView.addSubview(backgroundImage)
@@ -100,7 +102,6 @@ class ViewController: UIViewController {
     }
     
     func setupViewConstraints() {
-        // parentStackView
         NSLayoutConstraint.activate([
             parentStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             parentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -112,17 +113,27 @@ class ViewController: UIViewController {
             backgroundImage.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
             backgroundImage.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor),
             
-            bottomStackView.leadingAnchor.constraint(equalTo: parentStackView.leadingAnchor),
-            bottomStackView.trailingAnchor.constraint(equalTo: parentStackView.trailingAnchor),
+            buttonCreateAccount.leadingAnchor.constraint(equalTo: buttonStackView.leadingAnchor, constant: 56),
+            buttonCreateAccount.trailingAnchor.constraint(equalTo: buttonStackView.trailingAnchor, constant: -56),
+
+            buttonLogin.leadingAnchor.constraint(equalTo: buttonStackView.leadingAnchor, constant: 56),
+            buttonLogin.trailingAnchor.constraint(equalTo: buttonStackView.trailingAnchor, constant: -56),
             
             buttonCreateAccount.heightAnchor.constraint(equalToConstant: 44),
             buttonLogin.heightAnchor.constraint(equalToConstant: 44),
             
+            buttonStackView.trailingAnchor.constraint(equalTo: parentStackView.trailingAnchor),
+            buttonStackView.leadingAnchor.constraint(equalTo: parentStackView.leadingAnchor)
             
         ])
     }
     
+    func setupNavigationController(){
+        navigationController?.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "brasilButton"),style: .done,target: self, action: #selector(changeCountry))]
+    }
     
-    
+    @objc func changeCountry(){
+        
+    }
 }
 
