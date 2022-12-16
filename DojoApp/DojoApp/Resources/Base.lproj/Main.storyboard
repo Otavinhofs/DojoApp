@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="S9T-L6-KrZ">
-                                <rect key="frame" x="0.0" y="44" width="320" height="711"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S9T-L6-KrZ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="488"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B10-No-DqC">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="335"/>
@@ -36,15 +36,49 @@
                                             <constraint firstAttribute="height" constant="335" id="thg-23-jaZ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfw-qj-xUl">
-                                        <rect key="frame" x="0.0" y="376" width="240" height="335"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-n1-znc">
+                                        <rect key="frame" x="0.0" y="335" width="320" height="153"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos começar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqn-qb-u2g">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-yH-yjg">
+                                                <rect key="frame" x="0.0" y="57" width="320" height="96"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FD0-uS-s5u">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="tBq-dl-SXf"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrR-k5-hkw">
+                                                        <rect key="frame" x="0.0" y="52" width="320" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="7RT-gO-ZNS"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S9T-L6-KrZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NxM-vQ-alw"/>
+                            <constraint firstAttribute="bottom" secondItem="S9T-L6-KrZ" secondAttribute="bottom" constant="36" id="ONM-q3-aIY"/>
+                            <constraint firstItem="S9T-L6-KrZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SlQ-xx-mPW"/>
+                            <constraint firstItem="S9T-L6-KrZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZLK-49-MHg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="dTw-e0-6GN"/>
                 </viewController>
