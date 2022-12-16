@@ -112,10 +112,10 @@
                     <navigationItem key="navigationItem" id="NSa-ZU-h0z">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="NKP-oi-c2g">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qhX-X8-bcQ">
-                                <rect key="frame" x="-37" y="-17" width="71" height="33"/>
+                                <rect key="frame" x="110" y="0.0" width="194" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow" title="Brasil">
+                                <buttonConfiguration key="configuration" style="plain" image="arrowNavigation" imagePlacement="trailing" title="Brasil  ">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                             </button>
@@ -147,7 +147,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow" width="128" height="128"/>
+        <image name="arrowNavigation" width="8.5" height="15"/>
         <image name="backgroundImage" width="375" height="335"/>
         <namedColor name="primary">
             <color red="0.32941176470588235" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
