@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DojoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,12 @@
                                                         </constraints>
                                                         <color key="tintColor" name="typography"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Já tenho conta"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Já tenho conta">
+                                                            <backgroundConfiguration key="background" cornerRadius="22">
+                                                                <color key="strokeColor" name="primary"/>
+                                                            </backgroundConfiguration>
+                                                            <color key="baseForegroundColor" name="primary"/>
+                                                        </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="22"/>
@@ -104,7 +109,18 @@
                             <constraint firstItem="S9T-L6-KrZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZLK-49-MHg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="dTw-e0-6GN"/>
+                    <navigationItem key="navigationItem" id="NSa-ZU-h0z">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NKP-oi-c2g">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qhX-X8-bcQ">
+                                <rect key="frame" x="-37" y="-17" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow" title="Brasil">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,11 +141,13 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zP2-2N-fsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="1og-hc-dU0"/>
             </objects>
             <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow" width="128" height="128"/>
         <image name="backgroundImage" width="375" height="335"/>
         <namedColor name="primary">
             <color red="0.32941176470588235" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,6 +155,9 @@
         <namedColor name="typography">
             <color red="0.1803921568627451" green="0.19215686274509802" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
