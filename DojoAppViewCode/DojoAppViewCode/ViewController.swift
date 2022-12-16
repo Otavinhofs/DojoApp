@@ -58,8 +58,27 @@ class ViewController: UIViewController {
     
     private let buttonCreateAccount: UIButton = {
        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Criar sua conta", for: .normal)
+        button.backgroundColor = UIColor(red: 0.329, green: 0, blue: 0.49, alpha: 1)
+        button.layer.cornerRadius = 22
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
+    
+    private let buttonLogin: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Já tenho conta", for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 22
+        button.layer.borderWidth = 1.4
+        button.layer.borderColor = UIColor(red: 0.329, green: 0, blue: 0.49, alpha: 1).cgColor
+        button.setTitleColor(UIColor(red: 0.329, green: 0, blue: 0.49, alpha: 1), for: .normal)
+        return button
+    }()
+    
+    
     
 
     override func viewDidLoad() {
