@@ -80,6 +80,10 @@
                                                                 <integer key="value" value="22"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJS-O6-QM4"/>
+                                                            <segue destination="Az4-0I-0Sd" kind="show" id="Qk1-RR-E1r"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -108,7 +112,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NSa-ZU-h0z">
-                        <barButtonItem key="rightBarButtonItem" title="Brasil" style="plain" id="NKP-oi-c2g">
+                        <barButtonItem key="rightBarButtonItem" title="Brasil" image="brasilButton" style="done" id="NKP-oi-c2g">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -116,6 +120,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.92307692307691" y="-2.1327014218009479"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9mh-iL-u1R">
+            <objects>
+                <viewController id="Az4-0I-0Sd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="djl-hZ-T3c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="elx-z1-HYS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f1R-l6-nKG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amg-0b-JKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4aD-Tb-Chi">
@@ -139,6 +159,7 @@
     </scenes>
     <resources>
         <image name="backgroundImage" width="375" height="335"/>
+        <image name="brasilButton" width="98" height="25"/>
         <namedColor name="primary">
             <color red="0.32941176470588235" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
